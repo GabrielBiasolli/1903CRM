@@ -1,0 +1,13 @@
+[
+  { "id": 1, "name": "Northwind Logistics", "sector": "Logistics", "address": "1200 Harbor Blvd, Seattle, WA", "notes": "Interested in fleet tracking. Decision expected after Q3 budget review." },
+  { "id": 2, "name": "Bluepeak Software", "sector": "Technology", "address": "455 Market St, San Francisco, CA", "notes": "Prefers communication by email. Priya is the main point of contact." },
+  { "id": 3, "name": "Vitalis Health Group", "sector": "Healthcare", "address": "88 Beacon St, Boston, MA", "notes": "" },
+  { "id": 4, "name": "Copperline Manufacturing", "sector": "Manufacturing", "address": "3100 Industrial Pkwy, Detroit, MI", "notes": "Long sales cycle. Procurement requires three quotes." },
+  { "id": 5, "name": "Greenfield Retail Co.", "sector": "Retail", "address": "720 Elm Ave, Columbus, OH", "notes": "" },
+  { "id": 6, "name": "Atlas Capital Partners", "sector": "Finance", "address": "15 Wall St, New York, NY", "notes": "Needs compliance documentation before any contract." },
+  { "id": 7, "name": "Brightpath Academy", "sector": "Education", "address": "240 College Rd, Austin, TX", "notes": "" },
+  { "id": 8, "name": "Solaris Energy", "sector": "Energy", "address": "900 Sunrise Dr, Phoenix, AZ", "notes": "Met at the regional energy expo. Follow up in two weeks." },
+  { "id": 9, "name": "Harbor Foods", "sector": "Food & Beverage", "address": "61 Pier Ln, Portland, OR", "notes": "" },
+  { "id": 10, "name": "Nimbus Cloud Services", "sector": "Technology", "address": "500 Summit Way, Denver, CO", "notes": "Existing customer of a competitor; contract ends in March." },
+  { "id": 11, "name": "Ironclad Security", "sector": "Security", "address": "77 Fortress Ct, Arlington, VA", "notes": "" }
+]
