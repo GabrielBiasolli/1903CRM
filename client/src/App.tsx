@@ -5,20 +5,23 @@ import Contacts from './pages/Contacts'
 import Deals from './pages/Deals'
 import Tasks from './pages/Tasks'
 import Companies from './pages/Companies'
+import CompanyDetail from './pages/CompanyDetail'
 
 function App() {
-  
+
   return (
     <div>
       <NavBar />
-      <Routes>
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/deals" element={<Deals />} />
-              <Route path="/tasks" element={<Tasks />} />
-              <Route path="/contacts" element={<Contacts />} />
-              <Route path="/companies" element={<Companies />} />
-      </Routes>
-
+      <main className="mx-auto max-w-5xl px-6 py-8">
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/deals" element={<Deals />} />
+          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/companies" element={<Companies />} />
+          <Route path="/companies/:id" element={<CompanyDetail />} />
+        </Routes>
+      </main>
     </div>
   )
 }
