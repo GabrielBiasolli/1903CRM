@@ -49,3 +49,16 @@ export async function updateCompanyNotes(id: number, notes: string): Promise<Com
     companies[companyIndex].notes = notes
     return {...companies[companyIndex]}
 }
+
+export async function createCompany(name: string, sector: string): Promise<Company> {
+    await delay(MOCK_LATENCY_MS)
+    const newCompany: Company = {
+        id: companies.length + 1, // Simple ID generation for the mock.
+        name: name,
+        sector: sector,
+        address: '',   
+        notes: ''
+    }
+    companies.push(newCompany)
+    return newCompany
+}
