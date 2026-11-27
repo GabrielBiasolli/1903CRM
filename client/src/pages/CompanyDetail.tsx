@@ -2,7 +2,7 @@ import React from 'react';
 import { listCompanies, getCompanyWithContacts, updateCompanyNotes } from '../services/companyService';
 import type { Company, Contact } from '../types/crm';
 import { useParams } from 'react-router-dom';
-
+import NotFound from './NotFound';
 
 function ShowContacts(props: { clist: Contact[] }) {
     return (
@@ -33,6 +33,7 @@ export default function CompanyDetail() {
     const [saving, setSaving] = React.useState(false);
     const [showContacts, setShowContacts] = React.useState(false);
     const [companies, setCompanies] = React.useState<Company[]>([]);
+    const [notFound, setNotFound] = React.useState(false);
 
     React.useEffect(() => {
         async function fetchCompanies() {
@@ -46,14 +47,19 @@ export default function CompanyDetail() {
     const [contacts, setContacts] = React.useState<Contact[]>([]);
         React.useEffect(() => {
             async function fetchContacts() {
-                let mock = await getCompanyWithContacts(id);
-                setContacts(mock.contacts);
+                setNotFound(false); 
+                try{
+                    let mock = await getCompanyWithContacts(id);
+                    setContacts(mock.contacts);
+                }catch{
+                    setNotFound(true);
+                }
             }
             fetchContacts();
         }, [id]);
-
-    const company = companies.find((c) => c.id === id);
-
+ 
+        const company = companies.find((c) => c.id === id);
+ 
     async function handleSaveNotes(event: React.SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
         setSaving(true);
@@ -65,6 +71,8 @@ export default function CompanyDetail() {
             setSaving(false);
         }
     }
+
+    if (notFound) return <NotFound />;
 
     return (
         <div className="space-y-6">
